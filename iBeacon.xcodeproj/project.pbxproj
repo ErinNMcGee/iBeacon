@@ -25,6 +25,7 @@
 		C6718324192115DE00129B3B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6718323192115DE00129B3B /* SystemConfiguration.framework */; };
 		C671832C19211B7400129B3B /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C671832A19211B7400129B3B /* iBeaconViewController.m */; };
 		C671832D19211B7400129B3B /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671832B19211B7400129B3B /* iBeaconViewController.xib */; };
+		C671832F1921620600129B3B /* FlossIt.wav in Resources */ = {isa = PBXBuildFile; fileRef = C671832E1921620600129B3B /* FlossIt.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C671832919211B7400129B3B /* iBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
 		C671832A19211B7400129B3B /* iBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iBeaconViewController.m; sourceTree = "<group>"; };
 		C671832B19211B7400129B3B /* iBeaconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
+		C671832E1921620600129B3B /* FlossIt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FlossIt.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		C67182EF1921155E00129B3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C671832E1921620600129B3B /* FlossIt.wav */,
 				C67182F01921155E00129B3B /* iBeacon-Info.plist */,
 				C67182F11921155E00129B3B /* InfoPlist.strings */,
 				C67182F41921155E00129B3B /* main.m */,
@@ -256,6 +259,7 @@
 				C67183011921155F00129B3B /* Images.xcassets in Resources */,
 				C671832D19211B7400129B3B /* iBeaconViewController.xib in Resources */,
 				C67182F31921155E00129B3B /* InfoPlist.strings in Resources */,
+				C671832F1921620600129B3B /* FlossIt.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
