@@ -7,12 +7,18 @@
 //
 
 #import "iBeaconAppDelegate.h"
+#import "iBeaconViewController.h"
 
 @implementation iBeaconAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window= [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
     // Override point for customization after application launch.
+    iBeaconViewController *viewController = [[iBeaconViewController alloc] initWithNibName:@"iBeaconViewController" bundle:nil];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
