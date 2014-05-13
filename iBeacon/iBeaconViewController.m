@@ -18,14 +18,9 @@
 @property (nonatomic, strong) ESTBeaconRegion   *purpleBeaconRegion;
 @property (nonatomic, strong) ESTBeaconRegion   *garyBeaconRegion;
 
-@property (nonatomic, strong)  UILabel *regionLabel;
-@property (nonatomic, strong)  UILabel *kitchenEnterLabel;
-@property (nonatomic, strong)  UILabel *kitchenExitLabel;
-@property (nonatomic, strong)  UILabel *purpleEnterLabel;
-@property (nonatomic, strong)  UILabel *purpleExitLabel;
-@property (nonatomic, strong)  UILabel *garyEnterLabel;
-@property (nonatomic, strong)  UILabel *garyExitLabel;
-@property (nonatomic, strong)  UILabel *upCountLabel;
+@property (weak, nonatomic) IBOutlet UITextView *quoteText;
+@property (weak, nonatomic) IBOutlet UIImageView *quoteImage;
+
 @property (strong, nonatomic) AVAudioPlayer *playerBG;
 @end
 
@@ -38,31 +33,14 @@ static int garyNumberOfTimes=0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-
-
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    UIColor *simpsonsYellow = [UIColor colorWithRed:255.0f/255.0f green:217.0f/255.0f blue:15.0f/255.0f alpha:1.0f];
     
-    /*
-     * UI setup
-     */
-    self.regionLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 200, self.view.frame.size.width, 40)];
+    self.view.backgroundColor=simpsonsYellow;
+    self.quoteText.backgroundColor=simpsonsYellow;
     
-    self.kitchenEnterLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 180, self.view.frame.size.width, 40)];
-    
-    self.kitchenExitLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 160, self.view.frame.size.width, 40)];
-    
-    
-    self.purpleEnterLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 140, self.view.frame.size.width, 40)];
-    
-    self.purpleExitLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 120, self.view.frame.size.width, 40)];
-    
-    self.garyEnterLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 100, self.view.frame.size.width, 40)];
-    
-    self.garyExitLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 80, self.view.frame.size.width, 40)];
-    
-    self.upCountLabel=[[UILabel alloc] initWithFrame:CGRectMake(20, self.view.center.y - 60, self.view.frame.size.width, 40)];
+    [self.quoteText setHidden:YES];
+    [self.quoteImage setHidden:YES];
     
     /*
      * BeaconManager setup.
@@ -94,69 +72,58 @@ static int garyNumberOfTimes=0;
 - (void)beaconManager:(ESTBeaconManager *)manager didEnterRegion:(ESTBeaconRegion *)region
 {
     UILocalNotification *notification;
-    self.regionLabel.text=@"";
-    [self.view addSubview:self.regionLabel];
-    self.regionLabel.text = region.identifier;
-    [self.view addSubview:self.regionLabel];
+    int arrayValue=0 + arc4random() % (4 - 0 + 1);
+    NSString *notificationString;
+    NSArray *quotes = @[@"Principal Skinner: Uh oh. Two independent thought alarms in one day. The students are overstimulated.", @"Billy Corgan: Billy Corgan, Smashing Pumpkins. \n\nHomer: Homer Simpson, smiling politely", @"Roadie: Aw man, there goes Peter Frampton's big finale. He's gonna be pissed off.\n\nPeter Frampton: You're damn right I'm gonna be pissed off! I bought that pig at Pink Floyd's yard sale!", @"Homer: I am so smart! I am so smart! I am so smart! S-M-R-T... I mean S-M-A-R-T!", @"Homer: No TV and no beer make Homer... something something... \n\nMarge: Go crazy? \n\nHomer: Don’t mind if I do!"];
+    
+    NSArray *audio=@[@"ITA",@"SmilingPolitely",@"Frampton",@"SMRT",@"NoTV"];
+    [self.quoteImage setHidden:NO];
     
     if([region.identifier isEqualToString:@"KitchenRegionIdentifier"])
     {
-        notification = [UILocalNotification new];
+        NSArray *kitchenQuotes = @[@"Homer: When you have a rib-eye steak, you must floss it. Oh, that meatloaf tasted great, you must floss it! Now, floss it! Floss it good!", @"Homer: Ooh!  Floor pie!", @"Homer, Bart, and Marge: You don't win friends with salad! You don't win friends with salad!You don't win friends with salad! You don't win friends with salad!", @"Lisa: Dad! Those all come from the same animal! \n\nHomer: Yeah, right, Lisa. A wonderful, magical animal!", @"Lisa: Do you have any fruit? \n\nHomer: This has purple stuff inside, purple is a fruit."];
+        
+        NSArray *kitchenAudio=@[@"FlossIt",@"FloorPie",@"Salad",@"MagicalAnimal",@"PurpleIsAFruit"];
         kitchenNumberOfTimes++;
-        self.kitchenEnterLabel.text=@"";
-        [self.view addSubview:self.kitchenEnterLabel];
-        if(kitchenNumberOfTimes<=5)
-        {
-        notification.alertBody = @"When you have a rib-eye steak, you must floss it. Oh, that meatloaf tasted great, you must floss it! Now, floss it! Floss it good!";
-        self.kitchenEnterLabel.text = @"When you have a rib-eye steak, you must floss it. Oh, that meatloaf tasted great, you must floss it! Now, floss it! Floss it good!";
-            AVAudioPlayer *pp1 = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"FlossIt" ofType:@"wav"]] error:nil];
-            self.playerBG = pp1;
-            [pp1 prepareToPlay];
-            [self.playerBG play];
-        }
-        else if(kitchenNumberOfTimes<=10)
-        {
-            notification.alertBody = @"Ooh!  Floor pie!";
-            self.kitchenEnterLabel.text = @"Ooh!  Floor pie!";
-        }
-        [self.view addSubview:self.kitchenEnterLabel];
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        notificationString=[NSString stringWithFormat:@"You've walked by the kitchen %d time(s)!",kitchenNumberOfTimes];
+        AVAudioPlayer *pp1 = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:kitchenAudio[arrayValue] ofType:@"wav"]] error:nil];
+        self.playerBG = pp1;
+        [pp1 prepareToPlay];
+        [self.playerBG play];
+        self.quoteText.text = kitchenQuotes[arrayValue];
+        [self.quoteText setHidden:NO];
         [self.beaconManager stopMonitoringForRegion:self.kitchenBeaconRegion];
         [self.beaconManager startMonitoringForRegion:self.kitchenBeaconRegion];
     }
     else if([region.identifier isEqualToString:@"PurpleRegionIdentifier"])
     {
-        notification = [UILocalNotification new];
         purpleNumberOfTimes++;
-        notification.alertBody = [NSString stringWithFormat:@"You've passed the Purple %d times!", purpleNumberOfTimes];
-        self.purpleEnterLabel.text=@"";
-        [self.view addSubview:self.purpleEnterLabel];
-        self.purpleEnterLabel.text = [NSString stringWithFormat:@"You've passed the Purple %d times!", purpleNumberOfTimes];
-        [self.view addSubview:self.purpleEnterLabel];
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        notificationString=[NSString stringWithFormat:@"You've walked by the purple beacon %d times!",purpleNumberOfTimes];
+        AVAudioPlayer *pp1 = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:audio[arrayValue] ofType:@"wav"]] error:nil];
+        self.playerBG = pp1;
+        [pp1 prepareToPlay];
+        [self.playerBG play];
+        self.quoteText.text = quotes[arrayValue];
+        [self.quoteText setHidden:NO];
         [self.beaconManager stopMonitoringForRegion:self.purpleBeaconRegion];
         [self.beaconManager startMonitoringForRegion:self.purpleBeaconRegion];
     }
     else if([region.identifier isEqualToString:@"GaryRegionIdentifier"])
     {
-        notification = [UILocalNotification new];
         garyNumberOfTimes++;
-        notification.alertBody = [NSString stringWithFormat:@"You've passed Gary %d times!", garyNumberOfTimes];
-        self.garyEnterLabel.text=@"";
-        [self.view addSubview:self.garyEnterLabel];
-        self.garyEnterLabel.text = [NSString stringWithFormat:@"You've passed Gary %d times!", garyNumberOfTimes];
-        [self.view addSubview:self.garyEnterLabel];
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        notificationString=[NSString stringWithFormat:@"You've walked by Gary %d time(s)!",garyNumberOfTimes];
+        AVAudioPlayer *pp1 = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:audio[arrayValue] ofType:@"wav"]] error:nil];
+        self.playerBG = pp1;
+        [pp1 prepareToPlay];
+        [self.playerBG play];
+        self.quoteText.text = quotes[arrayValue];
+        [self.quoteText setHidden:NO];
         [self.beaconManager stopMonitoringForRegion:self.garyBeaconRegion];
         [self.beaconManager startMonitoringForRegion:self.garyBeaconRegion];
     }
     
-    self.upCountLabel.text=@"";
-    [self.view addSubview:self.upCountLabel];
-    self.upCountLabel.text = [NSString stringWithFormat:@"You've gotten up %d times! Yay!", (kitchenNumberOfTimes+purpleNumberOfTimes+garyNumberOfTimes)];
-    [self.view addSubview:self.upCountLabel];
     notification = [UILocalNotification new];
-    notification.alertBody=[NSString stringWithFormat:@"You've gotten up %d times! Yay!", (kitchenNumberOfTimes+purpleNumberOfTimes+garyNumberOfTimes)];
+    notification.alertBody=notificationString;
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     
 }

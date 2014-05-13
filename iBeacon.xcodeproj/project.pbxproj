@@ -26,6 +26,16 @@
 		C671832C19211B7400129B3B /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C671832A19211B7400129B3B /* iBeaconViewController.m */; };
 		C671832D19211B7400129B3B /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671832B19211B7400129B3B /* iBeaconViewController.xib */; };
 		C671832F1921620600129B3B /* FlossIt.wav in Resources */ = {isa = PBXBuildFile; fileRef = C671832E1921620600129B3B /* FlossIt.wav */; };
+		C6CDD2ED19225E2000E07BCB /* homer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2EC19225E2000E07BCB /* homer.jpg */; };
+		C6CDD2EF1922666900E07BCB /* Salad.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2EE1922666900E07BCB /* Salad.wav */; };
+		C6CDD2F11922691000E07BCB /* FloorPie.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2F01922691000E07BCB /* FloorPie.wav */; };
+		C6CDD2F3192269A300E07BCB /* MagicalAnimal.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2F2192269A300E07BCB /* MagicalAnimal.wav */; };
+		C6CDD2F519226AC200E07BCB /* PurpleIsAFruit.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2F419226AC200E07BCB /* PurpleIsAFruit.wav */; };
+		C6CDD2F719226F6500E07BCB /* ITA.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2F619226F6500E07BCB /* ITA.wav */; };
+		C6CDD2F91922736A00E07BCB /* SmilingPolitely.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2F81922736A00E07BCB /* SmilingPolitely.wav */; };
+		C6CDD2FB1922745D00E07BCB /* Frampton.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2FA1922745D00E07BCB /* Frampton.wav */; };
+		C6CDD2FD192275D300E07BCB /* SMRT.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2FC192275D300E07BCB /* SMRT.wav */; };
+		C6CDD2FF1922776700E07BCB /* NoTV.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD2FE1922776700E07BCB /* NoTV.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C67182E51921155E00129B3B /* iBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67182E51921155E00129B3B /* SimpBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67182E81921155E00129B3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C67182EA1921155E00129B3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C67182EC1921155E00129B3B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -63,6 +73,16 @@
 		C671832A19211B7400129B3B /* iBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iBeaconViewController.m; sourceTree = "<group>"; };
 		C671832B19211B7400129B3B /* iBeaconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
 		C671832E1921620600129B3B /* FlossIt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FlossIt.wav; sourceTree = "<group>"; };
+		C6CDD2EC19225E2000E07BCB /* homer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homer.jpg; sourceTree = "<group>"; };
+		C6CDD2EE1922666900E07BCB /* Salad.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Salad.wav; sourceTree = "<group>"; };
+		C6CDD2F01922691000E07BCB /* FloorPie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FloorPie.wav; sourceTree = "<group>"; };
+		C6CDD2F2192269A300E07BCB /* MagicalAnimal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MagicalAnimal.wav; sourceTree = "<group>"; };
+		C6CDD2F419226AC200E07BCB /* PurpleIsAFruit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PurpleIsAFruit.wav; sourceTree = "<group>"; };
+		C6CDD2F619226F6500E07BCB /* ITA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ITA.wav; sourceTree = "<group>"; };
+		C6CDD2F81922736A00E07BCB /* SmilingPolitely.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SmilingPolitely.wav; sourceTree = "<group>"; };
+		C6CDD2FA1922745D00E07BCB /* Frampton.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Frampton.wav; sourceTree = "<group>"; };
+		C6CDD2FC192275D300E07BCB /* SMRT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SMRT.wav; sourceTree = "<group>"; };
+		C6CDD2FE1922776700E07BCB /* NoTV.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = NoTV.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +126,7 @@
 		C67182E61921155E00129B3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C67182E51921155E00129B3B /* iBeacon.app */,
+				C67182E51921155E00129B3B /* SimpBeacon.app */,
 				C67183061921155F00129B3B /* iBeaconTests.xctest */,
 			);
 			name = Products;
@@ -144,6 +164,16 @@
 		C67182EF1921155E00129B3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6CDD2FE1922776700E07BCB /* NoTV.wav */,
+				C6CDD2FC192275D300E07BCB /* SMRT.wav */,
+				C6CDD2FA1922745D00E07BCB /* Frampton.wav */,
+				C6CDD2F81922736A00E07BCB /* SmilingPolitely.wav */,
+				C6CDD2F619226F6500E07BCB /* ITA.wav */,
+				C6CDD2F419226AC200E07BCB /* PurpleIsAFruit.wav */,
+				C6CDD2F2192269A300E07BCB /* MagicalAnimal.wav */,
+				C6CDD2F01922691000E07BCB /* FloorPie.wav */,
+				C6CDD2EE1922666900E07BCB /* Salad.wav */,
+				C6CDD2EC19225E2000E07BCB /* homer.jpg */,
 				C671832E1921620600129B3B /* FlossIt.wav */,
 				C67182F01921155E00129B3B /* iBeacon-Info.plist */,
 				C67182F11921155E00129B3B /* InfoPlist.strings */,
@@ -174,9 +204,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C67182E41921155E00129B3B /* iBeacon */ = {
+		C67182E41921155E00129B3B /* SimpBeacon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C67183171921155F00129B3B /* Build configuration list for PBXNativeTarget "iBeacon" */;
+			buildConfigurationList = C67183171921155F00129B3B /* Build configuration list for PBXNativeTarget "SimpBeacon" */;
 			buildPhases = (
 				C67182E11921155E00129B3B /* Sources */,
 				C67182E21921155E00129B3B /* Frameworks */,
@@ -186,9 +216,9 @@
 			);
 			dependencies = (
 			);
-			name = iBeacon;
+			name = SimpBeacon;
 			productName = iBeacon;
-			productReference = C67182E51921155E00129B3B /* iBeacon.app */;
+			productReference = C67182E51921155E00129B3B /* SimpBeacon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C67183051921155F00129B3B /* iBeaconTests */ = {
@@ -245,7 +275,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C67182E41921155E00129B3B /* iBeacon */,
+				C67182E41921155E00129B3B /* SimpBeacon */,
 				C67183051921155F00129B3B /* iBeaconTests */,
 			);
 		};
@@ -256,10 +286,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CDD2FD192275D300E07BCB /* SMRT.wav in Resources */,
+				C6CDD2EF1922666900E07BCB /* Salad.wav in Resources */,
+				C6CDD2F11922691000E07BCB /* FloorPie.wav in Resources */,
+				C6CDD2F91922736A00E07BCB /* SmilingPolitely.wav in Resources */,
+				C6CDD2F519226AC200E07BCB /* PurpleIsAFruit.wav in Resources */,
+				C6CDD2FF1922776700E07BCB /* NoTV.wav in Resources */,
 				C67183011921155F00129B3B /* Images.xcassets in Resources */,
+				C6CDD2ED19225E2000E07BCB /* homer.jpg in Resources */,
 				C671832D19211B7400129B3B /* iBeaconViewController.xib in Resources */,
+				C6CDD2FB1922745D00E07BCB /* Frampton.wav in Resources */,
+				C6CDD2F3192269A300E07BCB /* MagicalAnimal.wav in Resources */,
 				C67182F31921155E00129B3B /* InfoPlist.strings in Resources */,
 				C671832F1921620600129B3B /* FlossIt.wav in Resources */,
+				C6CDD2F719226F6500E07BCB /* ITA.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +337,7 @@
 /* Begin PBXTargetDependency section */
 		C671830C1921155F00129B3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C67182E41921155E00129B3B /* iBeacon */;
+			target = C67182E41921155E00129B3B /* SimpBeacon */;
 			targetProxy = C671830B1921155F00129B3B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -495,13 +535,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C67183171921155F00129B3B /* Build configuration list for PBXNativeTarget "iBeacon" */ = {
+		C67183171921155F00129B3B /* Build configuration list for PBXNativeTarget "SimpBeacon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C67183181921155F00129B3B /* Debug */,
 				C67183191921155F00129B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C671831A1921155F00129B3B /* Build configuration list for PBXNativeTarget "iBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +551,7 @@
 				C671831C1921155F00129B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

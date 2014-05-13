@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C67182E41921155E00129B3B"
                BuildableName = "iBeacon.app"
-               BlueprintName = "iBeacon"
+               BlueprintName = "SimpBeacon"
                ReferencedContainer = "container:iBeacon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C67182E41921155E00129B3B"
             BuildableName = "iBeacon.app"
-            BlueprintName = "iBeacon"
+            BlueprintName = "SimpBeacon"
             ReferencedContainer = "container:iBeacon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C67182E41921155E00129B3B"
             BuildableName = "iBeacon.app"
-            BlueprintName = "iBeacon"
+            BlueprintName = "SimpBeacon"
             ReferencedContainer = "container:iBeacon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C67182E41921155E00129B3B"
             BuildableName = "iBeacon.app"
-            BlueprintName = "iBeacon"
+            BlueprintName = "SimpBeacon"
             ReferencedContainer = "container:iBeacon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
